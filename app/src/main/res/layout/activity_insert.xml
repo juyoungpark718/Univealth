@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TimeTable.InsertActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="30dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="과목명 :"
+                android:textSize="15dp" />
+
+            <EditText
+                android:id="@+id/edit_subject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="과목명을 입력하세요 (10자 제한)                                          "
+                android:maxLength="10"
+                android:textSize="15dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="강의실 :"
+                android:textSize="15dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/edit_classroom"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="장소 검색"
+                android:textSize="15dp"
+                android:textColor="#00B992"
+                app:rippleColor="#00B992"
+                android:textAppearance="@style/TextAppearance.AppCompat.Button"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                />
+
+<!--            <EditText-->
+<!--                android:id="@+id/edit_classroom"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:hint="강의실을 검색해주세요.                                          "-->
+<!--                android:maxLength="10"-->
+<!--                android:textSize="15dp" />-->
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="교수명 :"
+                android:textSize="15dp" />
+
+            <EditText
+                android:id="@+id/edit_professor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="교수명을 입력하세요 (10자 제한)                                          "
+                android:maxLength="10"
+                android:textSize="15dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="시간 :    "
+                android:textSize="15dp" />
+
+            <EditText
+                android:id="@+id/edit_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="         "
+                android:textSize="15dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="  요일  "
+                android:textSize="15dp" />
+
+            <EditText
+                android:id="@+id/edit_starttime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="         "
+                android:textSize="15dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="  교시부터  "
+                android:textSize="15dp" />
+
+            <EditText
+                android:id="@+id/edit_endtime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="         "
+                android:inputType="number"
+                android:maxLength="2"
+                android:textSize="15dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="  교시까지"
+                android:textSize="15dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button_insert"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00B992"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:text="추가" />
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                android:id="@+id/result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </ScrollView>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Univealth</string>
+    <string name="route">경로 탐색</string>
+    <string name="deltefood">삭제</string>
+</resources>

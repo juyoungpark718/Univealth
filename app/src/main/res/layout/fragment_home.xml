@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:id="@+id/homeview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="15dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="75dp"
+                android:background="@drawable/radius_no_solid"
+                android:layout_marginBottom="15dp"
+                android:padding="5dp">
+                <TextView
+                    android:id="@+id/activitytimetext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:textColor="#000000"
+                    android:textSize="25dp"
+                    android:text="활동량"/>
+
+                <TextView
+                    android:id="@+id/stepcount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/stepcount_calc"
+                    android:layout_alignParentRight="true"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    android:text="0 걸음"/>
+
+                <TextView
+                    android:id="@+id/stepcount_calc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:textSize="14dp"
+                    android:text="0 kcal 0.0 km"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/radius_no_solid"
+                android:padding="5dp">
+                <TextView
+                    android:id="@+id/BMR_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:textSize="18dp"
+                    android:text="기초대사량"/>
+
+                <TextView
+                    android:id="@+id/BMR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textSize="18dp"
+                    android:text="0 kcal"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:background="@drawable/radius_no_solid"
+                android:layout_marginBottom="15dp"
+                android:padding="5dp">
+                <TextView
+                    android:id="@+id/remaining_kcal_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:textSize="18dp"
+                    android:text="남은 칼로리"/>
+
+                <TextView
+                    android:id="@+id/left_kcal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textSize="18dp"
+                    android:text="0 kcal"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radius_no_solid"
+                android:layout_marginBottom="15dp"
+                android:paddingTop="20dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="5dp">
+                <TextView
+                    android:id="@+id/intake_kcal_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/intake_kcal"
+                    android:textSize="18dp"
+                    android:text="섭취 칼로리"/>
+
+                <TextView
+                    android:id="@+id/intake_kcal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:textSize="18dp"
+                    android:text="0 kcal"/>
+
+                <ListView
+                    android:id="@+id/intake_listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/add_intake_button"
+                    android:orientation="vertical">
+
+
+                </ListView>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/add_intake_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/intake_kcal"
+                    android:textAppearance="@style/Widget.MaterialComponents.Button.TextButton"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    app:rippleColor="#00B992"
+                    android:textColor="#00B992"
+                    android:text="추가"
+                    android:textSize="15dp"
+                    android:onClick="onClickAddIntakeBtn"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:background="@drawable/radius_no_solid"
+                android:layout_margin="5dp"
+                android:padding="5dp">
+
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/kcal_chart"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
